@@ -12,6 +12,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
     <!-- ICONS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -22,29 +23,93 @@
       <nav>
         <div class="nav-wrapper row deep-purple lighten-1">
           <div class="col s12">
-            <a href="#!" class="brand-logo hide-on-med-and-down">Navigator</a>
-            <a href="#!" class="brand-logo center">Bid Editor</a>
+            <span class="brand-logo left">Bid Editor</span>
+            <!-- LINKS -->
             <ul class="right hide-on-small-only">
-              <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-              <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-              <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-admin">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-content">Content<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-editors">Editors<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-contracts">Contracts<i class="material-icons right">arrow_drop_down</i></a></li>
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-reports">Reports<i class="material-icons right">arrow_drop_down</i></a></li>
+
+              <li><a href="javascript:void(0)" class="dropdown-button" data-constrainwidth="false" data-activates="dropdown-list-user"><i class="fa fa-user"></i><i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
             <ul class="right hide-on-med-and-up">
               <li>
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <a href="#" data-activates="nav-slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
               </li>
             </ul>
-          </div>
-        </div>
+          </div><!-- .col -->
+        </div><!-- .nav-wrapper -->
       </nav>
-    </div>
+    </div><!-- .navbar-fixed -->
 
 
     <!-- Mobile Slide out nav -->
-    <ul id="slide-out" class="side-nav">
+    <ul id="nav-slide-out" class="side-nav">
       <li><a href="#!">First Sidebar Link</a></li>
       <li><a href="#!">Second Sidebar Link</a></li>
     </ul><!-- .slide-nav -->
+
+    <ul id="dropdown-list-admin" class="dropdown-content">
+      <li><a href="/admin/internal-user">Internal Users</a></li>
+      <li><a href="/admin/checkurl">Check Urls</a></li>
+      <li><a href="/admin/permissions">Default Permissions</a></li>
+      <li><a href="/admin/erate-loader">E-Rate Loader</a></li>
+      <li><a href="/admin/flag-content">Flagged Content</a></li>
+    </ul>
+
+    <ul id="dropdown-list-content" class="dropdown-content">
+      <li><strong>Jurisdictions</strong></li>
+      <li><a href="/admin/organization/">Profiles</a></li>
+      <li><a href="/admin/organization/new">Search/New</a></li>
+      <li><a href="/admin/organization/checkurl">Check URLs</a></li>
+      <li><a href="/admin/organization/expenditure">Expenditures</a></li>
+
+      <li><strong>Research</strong></li>
+      <li><a href="/admin/grant/">Grants</a></li>
+      <li><a href="/admin/document/">Jurisdiction Documents</a></li>
+
+      <li><strong>Contacts</strong></li>
+      <li><a href="/admin/contact/">Listing</a></li>
+      <li><a href="/admin/contact/new/">Search/New</a></li>
+      <li><a href="/admin/contact/upload/">Upload</a></li>
+
+      <div class="dropdown-divider"></div>
+
+      <li><a href="/admin/term-contracts/">Term Contracts</a></li>
+      <li><a href="/admin/bid/map/">Bid Map</a></li>
+      <li><a href="/admin/media-uploader/">Media Uploader</a></li>
+    </ul>
+
+    <ul id="dropdown-list-editors" class="dropdown-content">
+      <li><a href="/admin/bideditor/">Bid Editor</a></li>
+      <li><a href="/admin/contract-editor/">Contract Editor</a></li>
+      <li><a href="/admin/content-editor/">Market Alerts Editor</a></li>
+    </ul>
+
+    <ul id="dropdown-list-contracts" class="dropdown-content">
+      <li><a href="/admin/account/">Accounts</a></li>
+      <li><a href="/admin/user/">Users</a></li>
+      <li><a href="/admin/user/upload/">Upload User Spreadsheet</a></li>
+      <li><a href="/admin/user/">Download User Spreadsheet</a></li>
+    </ul>
+
+    <ul id="dropdown-list-reports" class="dropdown-content">
+      <li><a href="/admin/report/">Listing</a></li>
+      <li><a href="/admin/account/">Download account report</a></li>
+      <li><a href="/admin/report/feedback/">Feedback</a></li>
+      <li><a href="/admin/report/account-member-health/">Account Member Health</a></li>
+    </ul>
+
+    <ul id="dropdown-list-user" class="dropdown-content">
+      <li><strong>Nathaniel Bockoven</strong></li>
+      <li><a href="/mynav/settings/">Settings</a></li>
+      <li class="divider"></li>
+      <li><a href="/logout/">Logout</a></li>
+    </ul>
+
 
 
     <div class="container">
@@ -54,13 +119,13 @@
             <div class="card-content">
               <span class="card-title">Card Title</span>
               <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
+            </div><!-- .card-content -->
             <div class="card-action">
               <a href="#">This is a link</a>
               <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
+            </div><!-- .card-action -->
+          </div><!-- .card -->
+        </div><!-- .col -->
       </div><!-- .row -->
 
       <div class="row">
@@ -89,22 +154,22 @@
                   <input id="password" type="password" class="validate">
                   <label for="password">Password</label>
                 </div>
-              </div>
+              </div><!-- .row -->
               <div class="row">
                 <div class="input-field col s12">
                   <input id="email" type="email" class="validate">
                   <label for="email" data-error="wrong" data-success="right">Email</label>
                 </div>
-              </div>
+              </div><!-- .row -->
               <div class="row">
                 <div class="col s12 right-align">
                   <button type="submit" class="btn">submit</button>
                 </div>
-              </div>
-            </div>
+              </div><!-- .row -->
+            </div><!-- .card-content -->
           </form>
-        </div>
-      </div>
+        </div><!-- .col -->
+      </div><!-- .row -->
     </div><!-- .container -->
 
 
